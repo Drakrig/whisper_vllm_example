@@ -4,14 +4,15 @@ The repository holds a basic example of how to use Whisper ASR model with VLLM e
 
 Check `step_by_step.ipynb` notebook for more detailed explanation. 
 
-Information was scrapped all across Internet, but it should provide good enought base to understand how to use VLLM and Whisper to achieve quite impressive perfomance. With RTX 2080 Mobile 8Gb, it takes literally couple seconds to process 2 min audio which is huge boost, compare to native Transfomers realization.
+Information was scrapped all across Internet, but it should provide good enought base to understand how to use VLLM and Whisper to achieve quite impressive perfomance. With RTX 2080 Mobile 8Gb, it takes literally couple seconds to process 2 min audio, which is huge boost compare to native Transfomers realization.
 
 ## How to run example
 
-1. Install requrements
+1. Create virtual environment `python3 -m venv .venv` and activate it `source .venv/bin/activate`
+2. Install requrements
 ```pip install -r requirements.txt```
-2. Place your wavs into samples folder OR do not forget to pass their folder as argument
-3. Run
+3. Place your wavs into samples folder OR do not forget to pass their folder as argument
+4. Run
 ```python3 main.py```
 
 ### Arguments
@@ -20,7 +21,7 @@ Information was scrapped all across Internet, but it should provide good enought
 * `--gpu_memory_utilization` - GPU memory utilization, default value `0.55`
 * `--dtype` - Data type, default value `float16`
 * `--max_num_seqs` - Max number of sequences (batch size), default value `4`
-* `--sample_path` - Path to the audio samples, default value `samples`
+* `--sample_path` - Path to directory with the audio samples in `wav` format, default value `samples`
 * `--language` - Language code, default value `en`
 
 ## Sources
